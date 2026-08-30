@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promociones vigentes | Garbarinos Producciones</title>
+<style>
+  :root{
+    --navy-deep: #071620;
+    --navy-mid: #0e2c3d;
+    --navy-soft: #163d52;
+    --ice: #eaf5fb;
+    --ice-blue: #a9d8ec;
+    --steel: #6fa9c4;
+    --glow: #bfe8fa;
+    --card-bg: rgba(169,216,236,.06);
+    --card-border: rgba(169,216,236,.28);
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    min-height:100%;
+    background:
+      radial-gradient(900px 500px at 50% -8%, var(--navy-soft) 0%, var(--navy-mid) 45%, var(--navy-deep) 100%);
+    color: var(--ice);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .shard-bar{
+    position: fixed;
+    top:0; left:0; right:0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--ice-blue), var(--glow), var(--ice-blue), transparent);
+    opacity: .55;
+  }
+
+  .stage{
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 44px 20px 60px;
+    position: relative;
+  }
+
+  .back-link{
+    display:inline-flex;
+    align-items:center;
+    gap: 6px;
+    color: var(--ice-blue);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: .04em;
+    margin-bottom: 26px;
+    opacity: .85;
+  }
+  .back-link:hover{ opacity: 1; }
+
+  header.brand{
+    text-align:center;
+    margin-bottom: 26px;
+  }
+
+  .brand-mark{
+    width: 120px;
+    max-width: 48%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 4px 18px rgba(120,200,235,.22));
+  }
+
+  .title-block{
+    text-align:center;
+    margin-bottom: 28px;
+  }
+
+  .eyebrow{
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--ice-blue);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  h1{
+    font-size: 28px;
+    line-height: 1.15;
+    margin: 0 0 6px;
+    color: var(--ice);
+    font-weight: 800;
+  }
+
+  .subtitle{
+    color: var(--glow);
+    font-size: 14.5px;
+    opacity: .9;
+  }
+
+  .venue-note{
+    display:flex;
+    align-items:center;
+    gap: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 26px;
+    backdrop-filter: blur(6px);
+  }
+  .venue-note .ico{ font-size: 20px; flex: 0 0 auto; }
+  .venue-note .txt{ font-size: 13.5px; line-height: 1.5; opacity: .92; }
+  .venue-note .txt strong{ color: var(--glow); }
+
+  .promo-list{
+    display:flex;
+    flex-direction:column;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .promo-card{
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    backdrop-filter: blur(6px);
+  }
+
+  .promo-tag{
+    display:inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  .promo-tag.green{ background: rgba(90,200,120,.18); color: #8fe8ab; }
+  .promo-tag.red{ background: rgba(230,80,80,.18); color: #f2a3a3; }
+
+  .promo-title{
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--glow);
+    margin: 0 0 6px;
+  }
+
+  .promo-desc{
+    font-size: 13.5px;
+    line-height: 1.55;
+    opacity: .9;
+  }
+
+  .perks{
+    display:flex;
+    justify-content: space-between;
+    gap: 8px;
+    text-align:center;
+    margin-bottom: 30px;
+  }
+  .perk{
+    flex: 1 1 0;
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--ice-blue);
+    opacity: .85;
+  }
+  .perk .ico{ font-size: 20px; display:block; margin-bottom: 6px; }
+
+  .flyer{
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.4);
+  }
+  .flyer img{
+    display:block;
+    width: 100%;
+    height: auto;
+  }
+
+  .note{
+    text-align:center;
+    font-size: 12px;
+    color: var(--ice-blue);
+    opacity: .7;
+    margin-bottom: 30px;
+  }
+
+  a.buy-btn-lg{
+    display:block;
+    text-align:center;
+    background: linear-gradient(135deg, var(--ice-blue), var(--steel));
+    color: var(--navy-deep);
+    text-decoration:none;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    transition: filter .2s ease, transform .15s ease;
+  }
+  a.buy-btn-lg:hover{ filter: brightness(1.08); transform: translateY(-1px); }
+
+  footer{
+    text-align:center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--ice-blue);
+    opacity: .65;
+    letter-spacing: .05em;
+  }
+  footer a{
+    color: var(--glow);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+<div class="shard-bar"></div>
+<div class="stage">
+
+  <a class="back-link" href="index.html">← Volver a Garbarinos Producciones</a>
+
+  <header class="brand">
+    <img class="brand-mark" src="img/garbarinos-logo.png" alt="Garbarinos Producciones">
+  </header>
+
+  <div class="title-block">
+    <div class="eyebrow">Punto de venta · Aromas</div>
+    <h1>Promociones vigentes</h1>
+    <div class="subtitle">Válidas para todas nuestras obras</div>
+  </div>
+
+  <div class="venue-note">
+    <span class="ico">📍</span>
+    <span class="txt"><strong>Aromas</strong> — Perfumería y artículos de limpieza<br>Comprá tus entradas y aprovechá estos beneficios en el local.</span>
+  </div>
+
+  <div class="promo-list">
+    <div class="promo-card">
+      <span class="promo-tag green">4 cuotas sin interés</span>
+      <div class="promo-title">Visa y Mastercard de Banco Provincia</div>
+      <div class="promo-desc">Pagá en 4 cuotas sin interés con tarjetas Visa y Mastercard emitidas por Banco Provincia.</div>
+    </div>
+
+    <div class="promo-card">
+      <span class="promo-tag green">Descuentos</span>
+      <div class="promo-title">Con Cuenta DNI</div>
+      <div class="promo-desc">Beneficios adicionales pagando con Cuenta DNI.</div>
+    </div>
+
+    <div class="promo-card">
+      <span class="promo-tag red">3 cuotas sin interés</span>
+      <div class="promo-title">Tarjeta Omix</div>
+      <div class="promo-desc">"Hace posible tu sueño" — 3 cuotas sin interés con tarjeta Omix.</div>
+    </div>
+  </div>
+
+  <div class="perks">
+    <div class="perk"><span class="ico">🎭</span>Disfrutá en vivo</div>
+    <div class="perk"><span class="ico">🎟️</span>Apoyá la cultura</div>
+    <div class="perk"><span class="ico">💚</span>Te hace bien</div>
+  </div>
+
+  <div class="flyer">
+    <img src="img/promo-banco-provincia.jpg" alt="Promociones vigentes en Aromas: 4 cuotas sin interés con Visa y Mastercard de Banco Provincia, descuentos con Cuenta DNI, 3 cuotas sin interés con Omix">
+  </div>
+
+  <div class="note">Promociones sujetas a modificación. Consultá vigencia en el punto de venta.</div>
+
+  <a class="buy-btn-lg" href="https://maps.app.goo.gl/GKUcUcBxt6Suy2tp9" target="_blank" rel="noopener">Cómo llegar a Aromas</a>
+
+  <footer>
+    <a href="index.html">Garbarinos Producciones</a> · Saladillo
+  </footer>
+
+</div>
+</body>
+</html>
