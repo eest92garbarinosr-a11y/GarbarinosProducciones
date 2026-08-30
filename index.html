@@ -123,6 +123,56 @@
     transform: translateY(-1px);
   }
 
+  a.featured-btn{
+    display:flex;
+    align-items:center;
+    gap: 14px;
+    background: linear-gradient(135deg, rgba(169,216,236,.16), rgba(111,169,196,.10));
+    border: 1px solid var(--glow);
+    border-radius: 10px;
+    padding: 16px 18px;
+    color: var(--ice);
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(120,200,235,.15);
+    transition: transform .15s ease, box-shadow .2s ease;
+  }
+
+  a.featured-btn:hover, a.featured-btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 8px 30px rgba(120,200,235,.25);
+  }
+
+  a.featured-btn .icon{
+    flex: 0 0 auto;
+    width: 22px;
+    height: 22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: var(--glow);
+  }
+
+  a.featured-btn .text-block{ flex: 1 1 auto; }
+
+  a.featured-btn .featured-eyebrow{
+    font-size: 10.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--glow);
+    opacity: .85;
+    margin-bottom: 2px;
+  }
+
+  a.featured-btn .featured-label{
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  a.featured-btn .arrow{
+    color: var(--glow);
+    font-size: 18px;
+  }
+
   a.link-btn .icon{
     flex: 0 0 auto;
     width: 22px;
@@ -340,6 +390,17 @@
     opacity: .7;
   }
 
+  .info-link{
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--glow);
+    text-decoration: none;
+    opacity: .85;
+    letter-spacing: .02em;
+  }
+  .info-link:hover{ opacity: 1; text-decoration: underline; }
+
   footer{
     text-align:center;
     margin-top: 40px;
@@ -380,6 +441,19 @@
     <div class="tagline">Todas nuestras obras, en un solo lugar</div>
     <div class="divider"></div>
   </header>
+
+  <section>
+    <a class="featured-btn" href="obras/el-equilibrista.html">
+      <span class="icon">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm.75 15h-1.5v-1.5h1.5V17zm1.55-6.13c-.4.4-.7.72-.85 1.13-.1.27-.15.5-.15 1h-1.5v-.25c0-.6.1-1.05.35-1.5.25-.45.6-.8 1.05-1.25.35-.35.55-.65.55-1.1 0-.6-.5-1-1.2-1-.7 0-1.2.42-1.25 1.13H9.25C9.35 8.9 10.35 8 11.85 8c1.55 0 2.65 1 2.65 2.35 0 .65-.3 1.1-.7 1.52z"/></svg>
+      </span>
+      <span class="text-block">
+        <div class="featured-eyebrow">Próxima obra</div>
+        <div class="featured-label">Información sobre nuestra próxima obra</div>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+  </section>
 
   <section>
     <div class="section-label">Contacto</div>
@@ -443,6 +517,7 @@
         <a class="buy-btn" href="https://plateanet.com/obra/35178" target="_blank" rel="noopener">Comprar entradas</a>
         <span class="vendor-tag">Plateanet</span>
       </div>
+      <a class="info-link" href="obras/el-equilibrista.html">Más información →</a>
     </div>
 
     <div class="obra-card">
