@@ -195,6 +195,55 @@
     font-size: 18px;
   }
 
+  .assoc-card{
+    display:flex;
+    align-items:center;
+    gap: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: var(--ice);
+    backdrop-filter: blur(6px);
+    transition: background .2s ease, transform .15s ease, border-color .2s ease;
+  }
+
+  .assoc-card:hover, .assoc-card:active{
+    background: rgba(169,216,236,.14);
+    border-color: var(--glow);
+    transform: translateY(-1px);
+  }
+
+  .assoc-logo{
+    flex: 0 0 auto;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  .assoc-text{ flex: 1 1 auto; }
+
+  .assoc-name{
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--glow);
+    margin: 0 0 3px;
+  }
+
+  .assoc-sub{
+    font-size: 12px;
+    opacity: .85;
+    line-height: 1.45;
+  }
+
+  .assoc-card .arrow{
+    color: var(--glow);
+    opacity: .8;
+    font-size: 18px;
+  }
+
   .tickets-by{
     display:flex;
     align-items:center;
@@ -307,6 +356,7 @@
     section:nth-of-type(2){ animation-delay: .06s; }
     section:nth-of-type(3){ animation-delay: .12s; }
     section:nth-of-type(4){ animation-delay: .18s; }
+    section:nth-of-type(5){ animation-delay: .24s; }
   }
 
   @keyframes riseUp{
@@ -440,6 +490,18 @@
       </div>
     </div>
 
+  </section>
+
+  <section>
+    <div class="section-label">Asociados a</div>
+    <a class="assoc-card" href="https://aadet.org.ar/" target="_blank" rel="noopener">
+      <img class="assoc-logo" src="img/aadet-logo.jpg" alt="AADET — Asociación Argentina de Empresarios Teatrales">
+      <span class="assoc-text">
+        <div class="assoc-name">AADET</div>
+        <div class="assoc-sub">Asociación Argentina de Empresarios Teatrales<br>Garbarinos Producciones es miembro asociado</div>
+      </span>
+      <span class="arrow">→</span>
+    </a>
   </section>
 
   <footer>
