@@ -322,9 +322,11 @@
 
   /* Obra cards */
   .obra-card{
+    display:flex;
+    gap: 14px;
     border: 1px solid var(--card-border);
     border-radius: 10px;
-    padding: 18px;
+    padding: 14px;
     margin-bottom: 14px;
     background: var(--card-bg);
     backdrop-filter: blur(6px);
@@ -340,8 +342,22 @@
     background: linear-gradient(180deg, var(--ice-blue), var(--steel));
   }
 
+  .obra-poster{
+    flex: 0 0 auto;
+    width: 92px;
+    height: 92px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+  }
+
+  .obra-content{
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
   .obra-title{
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 700;
     color: var(--glow);
     margin: 0 0 4px;
@@ -349,11 +365,11 @@
   }
 
   .obra-meta{
-    font-size: 13px;
+    font-size: 12.5px;
     color: var(--ice);
     opacity: .85;
-    line-height: 1.55;
-    margin-bottom: 12px;
+    line-height: 1.5;
+    margin-bottom: 10px;
   }
 
   .obra-footer{
@@ -512,57 +528,75 @@
     </div>
 
     <div class="obra-card">
-      <div class="obra-title">El Equilibrista</div>
-      <div class="obra-meta">Con Mauricio Dayub · Sábado 12 de septiembre, 21 hs<br>Teatro Marconi, Saladillo</div>
-      <div class="obra-footer">
-        <a class="buy-btn" href="https://plateanet.com/obra/35178" target="_blank" rel="noopener">Comprar entradas</a>
-        <span class="vendor-tag">Plateanet</span>
-      </div>
-      <a class="info-link" href="el-equilibrista.html">Más información →</a>
-    </div>
-
-    <div class="obra-card">
-      <div class="obra-title">Viuda e Hijas — Gira</div>
-      <div class="obra-meta">Con Nora Cárpena, María Valenzuela, Iliana Calabró, Paula Morales y Gonzalo Urtizberea<br>Sábado 26 de septiembre, 21 hs · Sala Monte Uzal</div>
-      <div class="obra-footer">
-        <a class="buy-btn" href="https://www.plateaunotickets.com/obra/10021/viuda-e-hijas" target="_blank" rel="noopener">Comprar entradas</a>
-        <span class="vendor-tag">Platea un Tickets</span>
+      <img class="obra-poster" src="img/obras/el-equilibrista.jpg" alt="El Equilibrista">
+      <div class="obra-content">
+        <div class="obra-title">El Equilibrista</div>
+        <div class="obra-meta">Con Mauricio Dayub · Sábado 12 de septiembre, 21 hs<br>Teatro Marconi, Saladillo</div>
+        <div class="obra-footer">
+          <a class="buy-btn" href="https://plateanet.com/obra/35178" target="_blank" rel="noopener">Comprar entradas</a>
+          <span class="vendor-tag">Plateanet</span>
+        </div>
+        <a class="info-link" href="el-equilibrista.html">Más información →</a>
       </div>
     </div>
 
     <div class="obra-card">
-      <div class="obra-title">Viuda e Hijas</div>
-      <div class="obra-meta">Con Nora Cárpena, María Valenzuela, Iliana Calabró, Paula Morales y Gonzalo Urtizberea<br>Domingo 27 de septiembre, 20 hs · Teatro Marconi, Saladillo</div>
-      <div class="obra-footer">
-        <a class="buy-btn" href="https://www.plateanet.com/obra/35230?obra=VIUDA-E-HIJAS_-__&paso=inicio" target="_blank" rel="noopener">Comprar entradas</a>
-        <span class="vendor-tag">Plateanet</span>
+      <img class="obra-poster" src="img/obras/viuda-e-hijas.jpg" alt="Viuda e Hijas">
+      <div class="obra-content">
+        <div class="obra-title">Viuda e Hijas — Gira</div>
+        <div class="obra-meta">Con Nora Cárpena, María Valenzuela, Iliana Calabró, Paula Morales y Gonzalo Urtizberea<br>Sábado 26 de septiembre, 21 hs · Sala Monte Uzal</div>
+        <div class="obra-footer">
+          <a class="buy-btn" href="https://www.plateaunotickets.com/obra/10021/viuda-e-hijas" target="_blank" rel="noopener">Comprar entradas</a>
+          <span class="vendor-tag">Platea un Tickets</span>
+        </div>
       </div>
     </div>
 
     <div class="obra-card">
-      <div class="obra-title">Maldita Felicidad</div>
-      <div class="obra-meta">Con Pablo Echarri, Paola Krum, Carlos Portaluppi e Inés Palombo<br>Domingo 4 de octubre, 20 hs · Teatro Marconi, Saladillo</div>
-      <div class="obra-footer">
-        <a class="buy-btn" href="https://www.plateanet.com/obra/34913?obra=MALDITA-FELICIDAD_--&paso=inicio" target="_blank" rel="noopener">Comprar entradas</a>
-        <span class="vendor-tag">Plateanet</span>
+      <img class="obra-poster" src="img/obras/viuda-e-hijas.jpg" alt="Viuda e Hijas">
+      <div class="obra-content">
+        <div class="obra-title">Viuda e Hijas</div>
+        <div class="obra-meta">Con Nora Cárpena, María Valenzuela, Iliana Calabró, Paula Morales y Gonzalo Urtizberea<br>Domingo 27 de septiembre, 20 hs · Teatro Marconi, Saladillo</div>
+        <div class="obra-footer">
+          <a class="buy-btn" href="https://www.plateanet.com/obra/35230?obra=VIUDA-E-HIJAS_-__&paso=inicio" target="_blank" rel="noopener">Comprar entradas</a>
+          <span class="vendor-tag">Plateanet</span>
+        </div>
       </div>
     </div>
 
     <div class="obra-card">
-      <div class="obra-title">Sergio Feferovich — La Música de las Ideas</div>
-      <div class="obra-meta">Viernes 9 de octubre, 21 hs<br>Teatro Comedia de Saladillo</div>
-      <div class="obra-footer">
-        <a class="buy-btn" href="https://www.plateanet.com/obra/34379?obra=SERGIO-FEFEROVICH---LA-MUSICA-DE-LAS-IDEAS&paso=inicio" target="_blank" rel="noopener">Comprar entradas</a>
-        <span class="vendor-tag">Plateanet</span>
+      <img class="obra-poster" src="img/obras/maldita-felicidad.jpg" alt="Maldita Felicidad">
+      <div class="obra-content">
+        <div class="obra-title">Maldita Felicidad</div>
+        <div class="obra-meta">Con Pablo Echarri, Paola Krum, Carlos Portaluppi e Inés Palombo<br>Domingo 4 de octubre, 20 hs · Teatro Marconi, Saladillo</div>
+        <div class="obra-footer">
+          <a class="buy-btn" href="https://www.plateanet.com/obra/34913?obra=MALDITA-FELICIDAD_--&paso=inicio" target="_blank" rel="noopener">Comprar entradas</a>
+          <span class="vendor-tag">Plateanet</span>
+        </div>
       </div>
     </div>
 
     <div class="obra-card">
-      <div class="obra-title">Pareja Imperfecta</div>
-      <div class="obra-meta">Con Fernanda Vives y Seba Cobelli<br>Sábado 10 de octubre, 21 hs · Teatro Comedia de Saladillo</div>
-      <div class="obra-footer">
-        <a class="buy-btn" href="https://www.plateanet.com/obra/35135?obra=PAREJA-IMPERFECTA-_&paso=inicio" target="_blank" rel="noopener">Comprar entradas</a>
-        <span class="vendor-tag">Plateanet</span>
+      <img class="obra-poster" src="img/obras/la-musica-de-las-ideas.jpg" alt="Sergio Feferovich — La Música de las Ideas">
+      <div class="obra-content">
+        <div class="obra-title">Sergio Feferovich — La Música de las Ideas</div>
+        <div class="obra-meta">Viernes 9 de octubre, 21 hs<br>Teatro Comedia de Saladillo</div>
+        <div class="obra-footer">
+          <a class="buy-btn" href="https://www.plateanet.com/obra/34379?obra=SERGIO-FEFEROVICH---LA-MUSICA-DE-LAS-IDEAS&paso=inicio" target="_blank" rel="noopener">Comprar entradas</a>
+          <span class="vendor-tag">Plateanet</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="obra-card">
+      <img class="obra-poster" src="img/obras/pareja-imperfecta.jpg" alt="Pareja Imperfecta">
+      <div class="obra-content">
+        <div class="obra-title">Pareja Imperfecta</div>
+        <div class="obra-meta">Con Fernanda Vives y Seba Cobelli<br>Sábado 10 de octubre, 21 hs · Teatro Comedia de Saladillo</div>
+        <div class="obra-footer">
+          <a class="buy-btn" href="https://www.plateanet.com/obra/35135?obra=PAREJA-IMPERFECTA-_&paso=inicio" target="_blank" rel="noopener">Comprar entradas</a>
+          <span class="vendor-tag">Plateanet</span>
+        </div>
       </div>
     </div>
 
