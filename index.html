@@ -25,6 +25,7 @@
     min-height:100%;
     background:
       radial-gradient(900px 500px at 50% -8%, var(--navy-soft) 0%, var(--navy-mid) 45%, var(--navy-deep) 100%);
+    background-attachment: fixed;
     color: var(--ice);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
@@ -41,7 +42,6 @@
     max-width: 480px;
     margin: 0 auto;
     padding: 44px 20px 60px;
-    position: relative;
   }
 
   header{
@@ -68,19 +68,39 @@
     filter: drop-shadow(0 6px 24px rgba(120,200,235,.25));
   }
 
-  .tagline{
-    color: var(--ice-blue);
-    font-size: 14.5px;
-    opacity: .9;
-    letter-spacing: .01em;
-  }
-
   .divider{
     width: 56px;
     height: 1.5px;
     background: linear-gradient(90deg, transparent, var(--ice-blue), transparent);
-    margin: 22px auto 0;
+    margin: 22px auto 26px;
     opacity: .8;
+  }
+
+  h1{
+    font-size: 25px;
+    line-height: 1.3;
+    margin: 0 0 14px;
+    color: var(--ice);
+    font-weight: 800;
+    letter-spacing: .01em;
+  }
+
+  .curtain-img{
+    display:block;
+    width: 100%;
+    height: auto;
+    margin: 4px 0 18px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 10px 36px rgba(0,0,0,.45);
+  }
+
+  .thanks p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--glow);
+    margin: 0;
+    opacity: .95;
   }
 
   section{ margin-bottom: 36px; }
@@ -121,56 +141,6 @@
     background: rgba(169,216,236,.14);
     border-color: var(--glow);
     transform: translateY(-1px);
-  }
-
-  a.featured-btn{
-    display:flex;
-    align-items:center;
-    gap: 14px;
-    background: linear-gradient(135deg, rgba(169,216,236,.16), rgba(111,169,196,.10));
-    border: 1px solid var(--glow);
-    border-radius: 10px;
-    padding: 16px 18px;
-    color: var(--ice);
-    text-decoration: none;
-    box-shadow: 0 6px 24px rgba(120,200,235,.15);
-    transition: transform .15s ease, box-shadow .2s ease;
-  }
-
-  a.featured-btn:hover, a.featured-btn:active{
-    transform: translateY(-1px);
-    box-shadow: 0 8px 30px rgba(120,200,235,.25);
-  }
-
-  a.featured-btn .icon{
-    flex: 0 0 auto;
-    width: 22px;
-    height: 22px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color: var(--glow);
-  }
-
-  a.featured-btn .text-block{ flex: 1 1 auto; }
-
-  a.featured-btn .featured-eyebrow{
-    font-size: 10.5px;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--glow);
-    opacity: .85;
-    margin-bottom: 2px;
-  }
-
-  a.featured-btn .featured-label{
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  a.featured-btn .arrow{
-    color: var(--glow);
-    font-size: 18px;
   }
 
   a.link-btn .icon{
@@ -245,6 +215,7 @@
     font-size: 18px;
   }
 
+  /* Asociados (AADET) */
   .assoc-card{
     display:flex;
     align-items:center;
@@ -294,129 +265,6 @@
     font-size: 18px;
   }
 
-  .tickets-by{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap: 12px;
-    margin-bottom: 18px;
-    background: rgba(255,255,255,.04);
-    border: 1px solid var(--card-border);
-    border-radius: 10px;
-    padding: 10px 16px;
-  }
-
-  .tickets-by img{
-    height: 34px;
-    width: auto;
-    border-radius: 6px;
-    display:block;
-  }
-
-  .tickets-by span{
-    font-size: 11px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--ice-blue);
-  }
-
-  /* Obra cards */
-  .obra-card{
-    display:flex;
-    gap: 14px;
-    border: 1px solid var(--card-border);
-    border-radius: 10px;
-    padding: 14px;
-    margin-bottom: 14px;
-    background: var(--card-bg);
-    backdrop-filter: blur(6px);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .obra-card::before{
-    content:"";
-    position:absolute;
-    left:0; top:0; bottom:0;
-    width: 3px;
-    background: linear-gradient(180deg, var(--ice-blue), var(--steel));
-  }
-
-  .obra-poster{
-    flex: 0 0 auto;
-    width: 92px;
-    height: 92px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid var(--card-border);
-  }
-
-  .obra-content{
-    flex: 1 1 auto;
-    min-width: 0;
-  }
-
-  .obra-title{
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--glow);
-    margin: 0 0 4px;
-    letter-spacing: .01em;
-  }
-
-  .obra-meta{
-    font-size: 12.5px;
-    color: var(--ice);
-    opacity: .85;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-
-  .obra-footer{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  a.buy-btn{
-    display:inline-block;
-    background: linear-gradient(135deg, var(--ice-blue), var(--steel));
-    color: var(--navy-deep);
-    text-decoration:none;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: .05em;
-    text-transform: uppercase;
-    padding: 9px 16px;
-    border-radius: 6px;
-    transition: filter .2s ease;
-  }
-
-  a.buy-btn:hover{
-    filter: brightness(1.1);
-  }
-
-  .vendor-tag{
-    font-size: 10.5px;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: var(--ice-blue);
-    opacity: .7;
-  }
-
-  .info-link{
-    display: block;
-    margin-top: 10px;
-    font-size: 12px;
-    color: var(--glow);
-    text-decoration: none;
-    opacity: .85;
-    letter-spacing: .02em;
-  }
-  .info-link:hover{ opacity: 1; text-decoration: underline; }
-
   footer{
     text-align:center;
     margin-top: 40px;
@@ -433,7 +281,6 @@
     section:nth-of-type(2){ animation-delay: .06s; }
     section:nth-of-type(3){ animation-delay: .12s; }
     section:nth-of-type(4){ animation-delay: .18s; }
-    section:nth-of-type(5){ animation-delay: .24s; }
   }
 
   @keyframes riseUp{
@@ -441,7 +288,7 @@
     to{ opacity:1; transform: translateY(0); }
   }
 
-  a:focus-visible, button:focus-visible{
+  a:focus-visible{
     outline: 2px solid var(--glow);
     outline-offset: 2px;
   }
@@ -454,32 +301,13 @@
   <header>
     <div class="eyebrow">Teatro y Música</div>
     <img class="brand-mark" src="img/garbarinos-logo.png" alt="Garbarinos Producciones">
-    <div class="tagline">Todas nuestras obras, en un solo lugar</div>
     <div class="divider"></div>
+    <div class="thanks">
+      <h1>¡Gracias a todos por un año con mucho teatro!</h1>
+      <img class="curtain-img" src="img/nos-vemos-2027.jpg" alt="Nos vemos en el 2027">
+      <p>Te esperamos en el 2027 para ver nuestra cartelera.</p>
+    </div>
   </header>
-
-  <section>
-    <a class="featured-btn" href="el-equilibrista.html">
-      <span class="icon">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm.75 15h-1.5v-1.5h1.5V17zm1.55-6.13c-.4.4-.7.72-.85 1.13-.1.27-.15.5-.15 1h-1.5v-.25c0-.6.1-1.05.35-1.5.25-.45.6-.8 1.05-1.25.35-.35.55-.65.55-1.1 0-.6-.5-1-1.2-1-.7 0-1.2.42-1.25 1.13H9.25C9.35 8.9 10.35 8 11.85 8c1.55 0 2.65 1 2.65 2.35 0 .65-.3 1.1-.7 1.52z"/></svg>
-      </span>
-      <span class="text-block">
-        <div class="featured-eyebrow">Próxima obra</div>
-        <div class="featured-label">Información sobre nuestra próxima obra</div>
-      </span>
-      <span class="arrow">→</span>
-    </a>
-    <a class="featured-btn" href="promociones.html" style="margin-top:12px;">
-      <span class="icon">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v3a2 2 0 0 1 0 4v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3a2 2 0 0 1 0-4V6a2 2 0 0 0-2-2zM9 8.5A1.5 1.5 0 1 1 9 11.5 1.5 1.5 0 0 1 9 8.5zm6 7A1.5 1.5 0 1 1 15 18.5 1.5 1.5 0 0 1 15 15.5zM8.5 16.5l7-7 1 1-7 7-1-1z"/></svg>
-      </span>
-      <span class="text-block">
-        <div class="featured-eyebrow">Punto de venta · Aromas</div>
-        <div class="featured-label">Promociones vigentes</div>
-      </span>
-      <span class="arrow">→</span>
-    </a>
-  </section>
 
   <section>
     <div class="section-label">Contacto</div>
@@ -518,88 +346,6 @@
       </span>
       <span class="arrow">→</span>
     </a>
-  </section>
-
-  <section>
-    <div class="section-label">Entradas para nuestras obras</div>
-    <div class="tickets-by">
-      <img src="img/plateanet-logo.jpg" alt="Plateanet">
-      <span>Venta oficial por Plateanet</span>
-    </div>
-
-    <div class="obra-card">
-      <img class="obra-poster" src="img/obras/el-equilibrista.jpg" alt="El Equilibrista">
-      <div class="obra-content">
-        <div class="obra-title">El Equilibrista</div>
-        <div class="obra-meta">Con Mauricio Dayub · Sábado 12 de septiembre, 21 hs<br>Teatro Marconi, Saladillo</div>
-        <div class="obra-footer">
-          <a class="buy-btn" href="https://plateanet.com/obra/35178" target="_blank" rel="noopener">Comprar entradas</a>
-          <span class="vendor-tag">Plateanet</span>
-        </div>
-        <a class="info-link" href="el-equilibrista.html">Más información →</a>
-      </div>
-    </div>
-
-    <div class="obra-card">
-      <img class="obra-poster" src="img/obras/viuda-e-hijas.jpg" alt="Viuda e Hijas">
-      <div class="obra-content">
-        <div class="obra-title">Viuda e Hijas — Gira</div>
-        <div class="obra-meta">Con Nora Cárpena, María Valenzuela, Iliana Calabró, Paula Morales y Gonzalo Urtizberea<br>Sábado 26 de septiembre, 21 hs · Sala Monte Uzal</div>
-        <div class="obra-footer">
-          <a class="buy-btn" href="https://www.plateaunotickets.com/obra/10021/viuda-e-hijas" target="_blank" rel="noopener">Comprar entradas</a>
-          <span class="vendor-tag">Platea un Tickets</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="obra-card">
-      <img class="obra-poster" src="img/obras/viuda-e-hijas.jpg" alt="Viuda e Hijas">
-      <div class="obra-content">
-        <div class="obra-title">Viuda e Hijas</div>
-        <div class="obra-meta">Con Nora Cárpena, María Valenzuela, Iliana Calabró, Paula Morales y Gonzalo Urtizberea<br>Domingo 27 de septiembre, 20 hs · Teatro Marconi, Saladillo</div>
-        <div class="obra-footer">
-          <a class="buy-btn" href="https://www.plateanet.com/obra/35230?obra=VIUDA-E-HIJAS_-__&paso=inicio" target="_blank" rel="noopener">Comprar entradas</a>
-          <span class="vendor-tag">Plateanet</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="obra-card">
-      <img class="obra-poster" src="img/obras/maldita-felicidad.jpg" alt="Maldita Felicidad">
-      <div class="obra-content">
-        <div class="obra-title">Maldita Felicidad</div>
-        <div class="obra-meta">Con Pablo Echarri, Paola Krum, Carlos Portaluppi e Inés Palombo<br>Domingo 4 de octubre, 20 hs · Teatro Marconi, Saladillo</div>
-        <div class="obra-footer">
-          <a class="buy-btn" href="https://www.plateanet.com/obra/34913?obra=MALDITA-FELICIDAD_--&paso=inicio" target="_blank" rel="noopener">Comprar entradas</a>
-          <span class="vendor-tag">Plateanet</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="obra-card">
-      <img class="obra-poster" src="img/obras/la-musica-de-las-ideas.jpg" alt="Sergio Feferovich — La Música de las Ideas">
-      <div class="obra-content">
-        <div class="obra-title">Sergio Feferovich — La Música de las Ideas</div>
-        <div class="obra-meta">Viernes 9 de octubre, 21 hs<br>Teatro Comedia de Saladillo</div>
-        <div class="obra-footer">
-          <a class="buy-btn" href="https://www.plateanet.com/obra/34379?obra=SERGIO-FEFEROVICH---LA-MUSICA-DE-LAS-IDEAS&paso=inicio" target="_blank" rel="noopener">Comprar entradas</a>
-          <span class="vendor-tag">Plateanet</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="obra-card">
-      <img class="obra-poster" src="img/obras/pareja-imperfecta.jpg" alt="Pareja Imperfecta">
-      <div class="obra-content">
-        <div class="obra-title">Pareja Imperfecta</div>
-        <div class="obra-meta">Con Fernanda Vives y Seba Cobelli<br>Sábado 10 de octubre, 21 hs · Teatro Comedia de Saladillo</div>
-        <div class="obra-footer">
-          <a class="buy-btn" href="https://www.plateanet.com/obra/35135?obra=PAREJA-IMPERFECTA-_&paso=inicio" target="_blank" rel="noopener">Comprar entradas</a>
-          <span class="vendor-tag">Plateanet</span>
-        </div>
-      </div>
-    </div>
-
   </section>
 
   <section>
